@@ -2,7 +2,7 @@ Bessie the cow has two decks of ![](https://latex.codecogs.com/svg.image?N&space
 
 Given ![](https://latex.codecogs.com/svg.image?Q) queries, with each query consisting of the integer ![](https://latex.codecogs.com/svg.image?r_i&space;(1&space;\leq&space;r_i&space;\leq&space;N)), find two integers, ![](https://latex.codecogs.com/svg.image?x_i) and ![](https://latex.codecogs.com/svg.image?y_i) for the ![](https://latex.codecogs.com/svg.image?i)-th query. 
 
-For each query, Bessie **removes** the card with ![](https://latex.codecogs.com/svg.image?r_i) on the front from first deck and second deck (if the second deck contains such a card.) Then, she finds ![](https://latex.codecogs.com/svg.image?x_i), the minimum number of cards needed to be removed to preserve the property on the first deck. Next, she finds ![](https://latex.codecogs.com/svg.image?y_i), the number of ways to remove any number of cards from the second deck that still satisfies the property. Finally, she only resets the first deck and **removes** the minimum number cards from the second deck to preserve the property unless it already follows the property.
+For each query, Bessie **removes** the card with ![](https://latex.codecogs.com/svg.image?r_i) on the front from first deck and second deck (if the second deck contains such a card.) Then, she finds ![](https://latex.codecogs.com/svg.image?x_i), the minimum number of cards needed to be removed to preserve the property on the first deck. Next, she finds ![](https://latex.codecogs.com/svg.image?y_i), the number of ways to remove any number of cards from the second deck that the second deck still satisfies the property. Finally, she only resets the first deck and **removes** the minimum number cards from the second deck to preserve the property unless it already follows the property.
 
 Because the value of ![](https://latex.codecogs.com/svg.image?y_i) might be too large, find the remainder of ![](https://latex.codecogs.com/svg.image?y_i) when divided by ![](https://latex.codecogs.com/svg.image?10^9+7). Also note that removing all the cards can contribute into ![](https://latex.codecogs.com/svg.image?y_i), and the first deck will always contain the card with ![](https://latex.codecogs.com/svg.image?r_i).
 <br></br>
@@ -41,6 +41,8 @@ The next ![](https://latex.codecogs.com/svg.image?Q) lines contains a query, wit
 1 1
 ```
 
-After removing the last card from the first deck, he also needs to remove the second and fourth cards (3 in total). He can remove those three cards, or remove the all of them (2 ways).
+After removing the last card from the first deck, he also needs to remove the second and fourth cards (2 in total). She can remove those three cards, or remove the all of them (2 ways). The first deck resets itself to its original state, but the second, fourth, and last cards are removed from the second deck.
+
+Then, after the first deck gets reset and the second card is removed, he also needs to remove the fourth and fifth cards. Now, there is only one way to remove cards from the second deck such that it satisfies the property: remove all of them (1 way), and both decks are updated accordingly.
 
 Problem Credits: Anthony Li
