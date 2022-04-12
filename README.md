@@ -42,3 +42,5 @@ The next ![](https://latex.codecogs.com/svg.image?Q) lines contains a query, wit
 ```
 
 After removing the last card from the first deck, he also needs to remove the second and fourth cards (3 in total). He can remove those three cards, or remove the all of them (2 ways).
+
+Problem Credit: Anthony Li
