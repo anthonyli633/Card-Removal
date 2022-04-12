@@ -1,13 +1,13 @@
 import java.util.*;
 import java.io.*;
 
-public class CardRemoval {
+public class Main {
 	static int [][] cards; 
 	static int [] cycleLengths, getID; 
 	static int currentLength = 0, cycleCount = 0, MOD = (int) (1e9 + 7);
 	
-  public static void main(String[] args) throws IOException{
-    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	public static void main(String[] args) throws IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st;
 		
 		int N = Integer.parseInt(br.readLine());
@@ -39,8 +39,7 @@ public class CardRemoval {
 		}
 		
 		br.close();
-  } 
-  public static void dfs(int source, int node, int ID, boolean update) {
+	} public static void dfs(int source, int node, int ID, boolean update) {
 		if (update) cycleLengths[node] = currentLength;
 		else currentLength ++;
 		getID[node] = ID;
