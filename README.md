@@ -36,9 +36,9 @@ The next ![](https://latex.codecogs.com/svg.image?Q) lines contains a query, wit
 
 **SAMPLE OUTPUT**
 ```
-3 2
-3 1
+2 2
 2 1
+1 1
 ```
 
 After removing the last card from the first deck, he also needs to remove the second and fourth cards (3 in total). He can remove those three cards, or remove the all of them (2 ways).
