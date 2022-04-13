@@ -1,10 +1,16 @@
-Bessie the cow has two decks of ![](https://latex.codecogs.com/svg.image?N&space;(1&space;\leq&space;N&space;\leq&space;10^5)) double-sided cards, with the ![](https://latex.codecogs.com/svg.image?i)-th card in both decks having a front number of ![](https://latex.codecogs.com/svg.image?f_i) and a back number of ![](https://latex.codecogs.com/svg.image?b_i). The cards are numbered in a way such that ![](https://latex.codecogs.com/svg.image?f) and ![](https://latex.codecogs.com/svg.image?b) are both permutations of ![](https://latex.codecogs.com/svg.image?1,2,...,N). Bessie would like both of her decks to have the property that the front and back sides of her cards consist of the same set of numbers. 
+Bessie the cow has two decks of ![](https://latex.codecogs.com/svg.image?N&space;(1&space;\leq&space;N&space;\leq&space;10^5)) double-sided cards, with the ![](https://latex.codecogs.com/svg.image?i)-th card in both decks having a front number of ![](https://latex.codecogs.com/svg.image?f_i) and a back number of ![](https://latex.codecogs.com/svg.image?b_i). The cards are numbered in a way such that ![](https://latex.codecogs.com/svg.image?f) and ![](https://latex.codecogs.com/svg.image?b) are both permutations of ![](https://latex.codecogs.com/svg.image?1,2,...,N). Bessie would like both of her decks to have the property that the front and back sides of her cards consist of the same set of numbers (empty set counts.) 
 
-Given ![](https://latex.codecogs.com/svg.image?Q&space;(1&space;\leq&space;Q&space;\leq&space;10^5)) queries, with each query consisting of the integer ![](https://latex.codecogs.com/svg.image?r_i&space;(1&space;\leq&space;r_i&space;\leq&space;N)), find two integers, ![](https://latex.codecogs.com/svg.image?x_i) and ![](https://latex.codecogs.com/svg.image?y_i) for the ![](https://latex.codecogs.com/svg.image?i)-th query. 
+There are ![](https://latex.codecogs.com/svg.image?Q&space;(1&space;\leq&space;Q&space;\leq&space;10^5)) queries, with each query consisting of the integer ![](https://latex.codecogs.com/svg.image?r_i&space;(1&space;\leq&space;r_i&space;\leq&space;N)).
 
-For each query, Bessie **removes** the card with ![](https://latex.codecogs.com/svg.image?r_i) on the front from first deck and second deck (if the second deck contains such a card.) Then, she finds ![](https://latex.codecogs.com/svg.image?x_i), the minimum number of cards needed to be removed to preserve the property on the first deck. Next, she finds ![](https://latex.codecogs.com/svg.image?y_i), the number of ways to remove any number of cards from the second deck that the second deck still satisfies the property. Finally, she only resets the first deck and **removes** the minimum number cards from the second deck to preserve the property unless it already follows the property.
+For each query, Bessie follows the following steps:
+1. **Remove** the card with ![](https://latex.codecogs.com/svg.image?r_i) from the first deck if it exists in the first deck.
+2. **Remove** the card with ![](https://latex.codecogs.com/svg.image?r_i) from the second deck if it exists in the second deck.
+3. Output the minimum number of cards needed to be removed to preserve the property on the first deck. 
+4. Output the number of ways to remove any number of cards from the second deck that it still satisfies the property. 
+5. Reset the first deck to its original state 
+6. **Remove** the minimum number cards from the second deck to preserve its property. 
 
-Because the value of ![](https://latex.codecogs.com/svg.image?y_i) might be too large, find the remainder of ![](https://latex.codecogs.com/svg.image?y_i) when divided by ![](https://latex.codecogs.com/svg.image?10^9+7). Also note that removing all the cards can contribute into ![](https://latex.codecogs.com/svg.image?y_i), and the first deck will always contain the card with ![](https://latex.codecogs.com/svg.image?r_i).
+Unfortunately, Bessie quickly becomes bored when doing this, so help Bessie by doing the steps for her. Because the values may be too large, output the remainders when both values are divided by ![](https://latex.codecogs.com/svg.image?10^9+7) for each query. 
 <br></br>
 
 **INPUT FORMAT (input arrives from the terminal / stdin):**
@@ -20,7 +26,7 @@ The next ![](https://latex.codecogs.com/svg.image?Q) lines contains a query, wit
 
 **OUTPUT FORMAT (print output to the terminal / stdout):**
 
-![](https://latex.codecogs.com/svg.image?Q) lines, with the ![](https://latex.codecogs.com/svg.image?i)-th line consisting of ![](https://latex.codecogs.com/svg.image?x_i) and (![](https://latex.codecogs.com/svg.image?y_i)'s remainder when divided by ![](https://latex.codecogs.com/svg.image?10^9+7))
+![](https://latex.codecogs.com/svg.image?Q) lines, with the ![](https://latex.codecogs.com/svg.image?i)-th line consisting of the two answers to each query, with each answer being separated by a space.)
 <br></br>
 
 **SAMPLE INPUT**
