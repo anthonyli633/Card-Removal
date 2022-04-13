@@ -47,8 +47,8 @@ The next ![](https://latex.codecogs.com/svg.image?Q) lines contains a query, wit
 1 1
 ```
 
-After removing the last card from the first deck, he also needs to remove the second and fourth cards (2 in total). She can remove those three cards, or remove the all of them (2 ways). The first deck resets itself to its original state, but the second, fourth, and last cards are removed from the second deck.
+After removing the last card from the first deck, she also needs to remove the second and fourth cards (2 in total). She can remove those three cards, or remove the all of them (2 ways). The first deck resets itself to its original state, but the second, fourth, and last cards are removed from the second deck.
 
-Then, after the first deck gets reset and the second card is removed, he also needs to remove the fourth and fifth cards. Now, there is only one way to remove cards from the second deck such that it satisfies the property: remove all of them (1 way), and both decks are updated accordingly.
+Then, after the first deck gets reset and the second card is removed, she also needs to remove the fourth and fifth cards. Now, there is only one way to remove cards from the second deck such that it satisfies the property: remove all of them (1 way), and both decks are updated accordingly.
 
 Problem Credits: Anthony Li
