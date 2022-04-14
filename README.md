@@ -3,8 +3,8 @@ Bessie the cow has two decks of ![](https://latex.codecogs.com/svg.image?N&space
 There are ![](https://latex.codecogs.com/svg.image?Q&space;(1&space;\leq&space;Q&space;\leq&space;10^5)) queries, with each query consisting of the integer ![](https://latex.codecogs.com/svg.image?r_i&space;(1&space;\leq&space;r_i&space;\leq&space;N)).
 
 For each query, Bessie follows the following steps:
-1. **Remove** the card with ![](https://latex.codecogs.com/svg.image?r_i) from the first deck if it exists in the first deck.
-2. **Remove** the card with ![](https://latex.codecogs.com/svg.image?r_i) from the second deck if it exists in the second deck.
+1. **Remove** the card with ![](https://latex.codecogs.com/svg.image?r_i) on the front from the first deck if it exists in the first deck.
+2. **Remove** the card with ![](https://latex.codecogs.com/svg.image?r_i) on the front from the second deck if it exists in the second deck.
 3. Output the minimum number of cards needed to be removed to preserve the property on the first deck. 
 4. Output the number of ways to remove any number of cards from the second deck that it still satisfies the property. 
 5. Reset the first deck to its original state 
