@@ -43,7 +43,7 @@ The next ![](https://latex.codecogs.com/svg.image?Q) lines contains a query, wit
 **SAMPLE OUTPUT**
 ```
 2 2
-2 1
+2 2
 1 1
 ```
 
